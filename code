@@ -4,25 +4,26 @@ print("1 сегодняшний день")
 print("2 другая дата")
 option = int(input("введите номер опции: "))
 if option == 1:
-a = datetime.date.today()
+    a = datetime.date.today()
 elif option == 2:
-m = int(input("введите месяц: "))
-d = int(input("введите день: "))
-a = datetime.date(2023, m, d)
+    m = int(input("введите месяц: "))
+    d = int(input("введите день: "))
+    a = datetime.date(2023, m, d)
 dm = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 sum_day = 0
 for i in range (0, a.month-1):
-sum_day += dm[i]
+    sum_day += dm[i]
 sum_day += a.day
 print(a)
 ost = sum_day % 4
 if ost == 0 or ost == 3:
-print("отдыхает")
+    print("отдыхает")
 else:
-print("работает")
+    print("работает")
 print("на следущий день")
 ost = (sum_day+1) % 4
 if ost == 0 or ost == 3:
-print("отдыхает")
+    print("отдыхает")
 else:
-print("работает")
+    print("работает")
+#wow it's amazing
